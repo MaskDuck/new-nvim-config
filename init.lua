@@ -13,7 +13,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 		os.exit(1)
 	end
 end
-
+vim.loader.enable()
 vim.opt.rtp:prepend(lazypath)
 -- Make sure to setup `mapleader` and `maplocalleader` before
 -- loading lazy.nvim so that mappings are correct.
@@ -25,6 +25,14 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.relativenumber = true
 vim.g.have_nerd_font = true
 vim.opt.shiftwidth = 4
+
+
+vim.keymap.set('n', '<F13>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<F14>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<F15>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+vim.keymap.set('n', '<F16>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<leader>n', '<Cmd>nohl<CR>', { desc = 'do not highlight!', silent = true })
+vim.opt.mouse = ""
 -- Setup lazy.nvim
 require("lazy").setup({
 	spec = {

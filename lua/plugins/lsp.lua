@@ -1,5 +1,6 @@
 return {
 	"neovim/nvim-lspconfig",
+	event = { "BufReadPost", "BufWritePost", "BufNewFile" },
 	config = function()
 		vim.lsp.enable('pyright')
 		vim.lsp.enable('lua_ls')
