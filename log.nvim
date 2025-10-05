@@ -1,0 +1,231 @@
+--- Startup times for process: Primary (or UI client) ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.001  000.001: --- NVIM STARTING ---
+000.244  000.243: event init
+000.394  000.150: early init
+000.467  000.073: locale set
+000.539  000.072: init first window
+001.344  000.805: inits 1
+001.357  000.013: window checked
+001.362  000.004: parsing arguments
+002.596  000.102  000.102: require('vim.shared')
+002.819  000.097  000.097: require('vim.inspect')
+002.962  000.120  000.120: require('vim._options')
+002.968  000.361  000.145: require('vim._editor')
+002.971  000.531  000.068: require('vim._init_packages')
+002.976  001.083: init lua interpreter
+006.500  003.524: nvim_ui_attach
+007.152  000.652: nvim_set_client_info
+007.155  000.004: --- NVIM STARTED ---
+
+--- Startup times for process: Embedded ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.001  000.001: --- NVIM STARTING ---
+000.202  000.201: event init
+000.344  000.142: early init
+000.399  000.056: locale set
+000.465  000.065: init first window
+001.053  000.588: inits 1
+001.069  000.017: window checked
+001.073  000.004: parsing arguments
+002.069  000.079  000.079: require('vim.shared')
+002.278  000.081  000.081: require('vim.inspect')
+002.381  000.083  000.083: require('vim._options')
+002.386  000.308  000.143: require('vim._editor')
+002.389  000.509  000.122: require('vim._init_packages')
+002.392  000.810: init lua interpreter
+002.498  000.105: expanding arguments
+002.554  000.056: inits 2
+003.128  000.574: init highlight
+003.129  000.001: waiting for UI
+003.397  000.268: done waiting for UI
+003.415  000.018: clear screen
+003.677  000.019  000.019: require('vim.keymap')
+005.220  000.240  000.240: sourcing nvim_exec2()
+005.395  001.975  001.716: require('vim._defaults')
+005.397  000.007: init default mappings & autocommands
+005.966  000.064  000.064: sourcing /usr/share/nvim/runtime/ftplugin.vim
+006.024  000.031  000.031: sourcing /usr/share/nvim/runtime/indent.vim
+006.198  000.134  000.134: sourcing /usr/share/nvim/archlinux.lua
+006.202  000.158  000.024: sourcing /etc/xdg/nvim/sysinit.vim
+008.330  000.033  000.033: require('vim.fs')
+008.357  000.245  000.212: require('vim.lsp.log')
+009.440  001.080  001.080: require('vim.lsp.protocol')
+010.642  001.199  001.199: require('vim.lsp.util')
+010.958  000.133  000.133: require('vim.lsp.sync')
+010.967  000.322  000.189: require('vim.lsp._changetracking')
+011.426  000.148  000.148: require('vim.lsp._transport')
+011.441  000.472  000.324: require('vim.lsp.rpc')
+011.468  004.522  001.204: require('vim.lsp')
+011.518  004.985  000.463: require('lsp.servers')
+011.647  000.128  000.128: require('lazy')
+011.669  000.013  000.013: require('ffi')
+011.752  000.066  000.066: require('vim.uri')
+011.764  000.092  000.027: require('vim.loader')
+011.856  000.080  000.080: require('lazy.stats')
+011.940  000.068  000.068: require('lazy.core.util')
+012.018  000.077  000.077: require('lazy.core.config')
+012.136  000.032  000.032: require('lazy.core.handler')
+012.238  000.030  000.030: require('lazy.pkg')
+012.241  000.062  000.032: require('lazy.core.meta')
+012.243  000.106  000.044: require('lazy.core.plugin')
+012.247  000.227  000.089: require('lazy.core.loader')
+012.529  000.027  000.027: require('lazy.core.fragments')
+013.040  000.053  000.053: require('lazy.core.handler.cmd')
+013.219  000.141  000.141: require('lazy.core.handler.event')
+013.223  000.180  000.039: require('lazy.core.handler.ft')
+013.300  000.071  000.071: require('lazy.core.handler.keys')
+013.332  000.005  000.005: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+013.342  000.001  000.001: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+013.839  000.056  000.056: sourcing nvim_exec2() called at /usr/share/nvim/runtime/filetype.lua:0
+013.841  000.216  000.160: sourcing /usr/share/nvim/runtime/filetype.lua
+013.843  000.234  000.018: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+013.879  000.001  000.001: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+013.883  000.000  000.000: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+014.384  000.234  000.234: require('kanagawa')
+014.428  000.042  000.042: require('kanagawa.utils')
+014.489  000.048  000.048: require('kanagawa.colors')
+014.715  000.094  000.094: require('kanagawa.lib.hsluv')
+014.725  000.148  000.054: require('kanagawa.lib.color')
+014.726  000.216  000.068: require('kanagawa.themes')
+014.840  000.068  000.068: require('kanagawa.highlights')
+014.930  000.089  000.089: require('kanagawa.highlights.editor')
+015.122  000.048  000.048: require('kanagawa.highlights.syntax')
+015.196  000.065  000.065: require('kanagawa.highlights.treesitter')
+015.230  000.026  000.026: require('kanagawa.highlights.lsp')
+015.324  000.090  000.090: require('kanagawa.highlights.plugins')
+015.790  001.651  000.726: sourcing /home/maskduck/.local/share/nvim/lazy/kanagawa.nvim/colors/kanagawa.vim
+015.793  001.909  000.258: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+015.884  000.002  000.002: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+015.888  000.001  000.001: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+016.050  000.075  000.075: require('lazydev')
+016.099  000.048  000.048: require('lazydev.config')
+016.164  000.034  000.034: require('lazydev.util')
+016.327  000.113  000.113: require('blink.cmp')
+016.394  000.037  000.037: require('blink.cmp.lib.async')
+016.444  000.022  000.022: require('blink.cmp.config.utils')
+016.463  000.018  000.018: require('blink.cmp.config.keymap')
+016.519  000.026  000.026: require('blink.cmp.config.completion.keyword')
+016.564  000.044  000.044: require('blink.cmp.config.completion.trigger')
+016.586  000.022  000.022: require('blink.cmp.config.completion.list')
+016.614  000.027  000.027: require('blink.cmp.config.completion.accept')
+016.658  000.043  000.043: require('blink.cmp.config.completion.menu')
+016.714  000.055  000.055: require('blink.cmp.config.completion.documentation')
+016.754  000.039  000.039: require('blink.cmp.config.completion.ghost_text')
+016.755  000.291  000.035: require('blink.cmp.config.completion')
+016.784  000.028  000.028: require('blink.cmp.config.fuzzy')
+016.813  000.028  000.028: require('blink.cmp.config.sources')
+016.837  000.024  000.024: require('blink.cmp.config.signature')
+016.861  000.024  000.024: require('blink.cmp.config.snippets')
+016.889  000.027  000.027: require('blink.cmp.config.appearance')
+016.908  000.018  000.018: require('blink.cmp.config.modes.cmdline')
+016.925  000.017  000.017: require('blink.cmp.config.modes.term')
+016.928  000.534  000.038: require('blink.cmp.config')
+016.958  000.029  000.029: require('blink.cmp.lib.utils')
+016.984  000.025  000.025: require('blink.cmp.lib.event_emitter')
+016.989  000.661  000.037: require('blink.cmp.sources.lib')
+017.010  000.812  000.038: sourcing /home/maskduck/.local/share/nvim/lazy/blink.cmp/plugin/blink-cmp.lua
+017.012  000.826  000.014: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+017.018  000.002  000.002: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+017.024  000.001  000.001: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+017.065  000.023  000.023: require('blink-cmp')
+017.661  000.043  000.043: require('blink.cmp.config.modes.types')
+018.023  000.048  000.048: require('blink.cmp.fuzzy.download.system')
+018.066  000.135  000.087: require('blink.cmp.fuzzy.download.files')
+018.069  000.183  000.048: require('blink.cmp.fuzzy.download.git')
+018.073  000.248  000.065: require('blink.cmp.fuzzy.download')
+018.172  000.063  000.063: require('vim._system')
+020.449  000.374  000.374: require('nvim-treesitter.utils')
+021.077  000.020  000.020: require('vim.treesitter.language')
+021.093  000.014  000.014: require('vim.func')
+021.112  000.016  000.016: require('vim.func._memoize')
+021.132  000.113  000.065: require('vim.treesitter.query')
+021.174  000.041  000.041: require('vim.treesitter._range')
+021.182  000.211  000.057: require('vim.treesitter.languagetree')
+021.186  000.331  000.120: require('vim.treesitter')
+021.476  001.023  000.692: require('nvim-treesitter.parsers')
+021.588  000.017  000.017: require('nvim-treesitter.compat')
+021.632  000.024  000.024: require('nvim-treesitter.ts_utils')
+021.636  000.046  000.022: require('nvim-treesitter.tsrange')
+021.650  000.014  000.014: require('nvim-treesitter.caching')
+021.655  000.108  000.031: require('nvim-treesitter.query')
+021.662  000.145  000.038: require('nvim-treesitter.configs')
+021.664  000.186  000.041: require('nvim-treesitter.info')
+021.695  000.031  000.031: require('nvim-treesitter.shell_command_selectors')
+021.708  001.747  000.133: require('nvim-treesitter.install')
+021.726  000.016  000.016: require('nvim-treesitter.statusline')
+021.767  000.025  000.025: require('nvim-treesitter.query_predicates')
+021.769  002.074  000.286: require('nvim-treesitter')
+021.814  000.042  000.042: require('vim.iter')
+022.248  002.600  000.484: sourcing /home/maskduck/.local/share/nvim/lazy/nvim-treesitter/plugin/nvim-treesitter.lua
+022.252  002.625  000.025: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+022.258  000.002  000.002: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+022.265  000.001  000.001: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+022.621  000.002  000.002: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+022.626  000.001  000.001: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+022.817  000.183  000.183: require('mini.notify')
+023.784  000.892  000.892: require('mini.icons')
+024.171  000.314  000.314: require('mini.files')
+024.206  000.010  000.010: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+024.212  000.003  000.003: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+024.710  000.479  000.479: require('mini.extra')
+024.942  000.165  000.165: require('mini.statusline')
+025.161  000.188  000.188: require('mini.pick')
+025.266  000.029  000.029: require('vim.ui')
+025.353  000.022  000.022: sourcing /usr/share/nvim/runtime/plugin/editorconfig.lua
+025.356  000.036  000.014: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+025.464  000.099  000.099: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+025.465  000.107  000.008: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+025.498  000.023  000.023: sourcing /usr/share/nvim/runtime/plugin/man.lua
+025.500  000.031  000.007: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+026.477  000.141  000.141: sourcing /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+026.494  000.986  000.845: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+026.497  000.995  000.009: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+026.591  000.072  000.072: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+026.593  000.082  000.010: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+026.899  000.130  000.130: sourcing /usr/share/nvim/runtime/pack/dist/opt/netrw/plugin/netrwPlugin.vim
+026.916  000.310  000.180: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+026.917  000.320  000.009: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+027.021  000.085  000.085: sourcing /usr/share/nvim/runtime/plugin/osc52.lua
+027.023  000.101  000.015: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+027.115  000.078  000.078: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+027.117  000.089  000.011: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+027.167  000.034  000.034: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+027.168  000.046  000.012: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+027.192  000.008  000.008: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+027.193  000.022  000.014: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+027.253  000.049  000.049: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+027.254  000.058  000.010: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+027.300  000.032  000.032: sourcing /usr/share/nvim/runtime/plugin/tohtml.lua
+027.301  000.045  000.013: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+027.324  000.010  000.010: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+027.325  000.021  000.011: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+027.404  000.068  000.068: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+027.406  000.079  000.011: sourcing nvim_exec2() called at /home/maskduck/.config/nvim/init.lua:0
+027.496  021.271  004.830: sourcing /home/maskduck/.config/nvim/init.lua
+027.500  000.579: sourcing vimrc file(s)
+027.628  000.033  000.033: sourcing /usr/share/nvim/runtime/filetype.lua
+027.723  000.034  000.034: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+027.769  000.113  000.079: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+027.778  000.132: inits 3
+028.839  001.061: reading ShaDa
+028.910  000.071: opening buffers
+028.942  000.032: BufEnter autocommands
+028.944  000.001: editing files in windows
+028.967  000.023: VimEnter autocommands
+029.087  000.070  000.070: require('vim.termcap')
+029.113  000.018  000.018: require('vim.text')
+029.131  000.076: UIEnter autocommands
+029.328  000.155  000.155: sourcing /usr/share/nvim/runtime/autoload/provider/clipboard.vim
+029.332  000.046: before starting main loop
+029.593  000.261: first screen update
+029.595  000.002: --- NVIM STARTED ---
+
