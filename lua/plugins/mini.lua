@@ -132,7 +132,32 @@ return {
 				toggle_preview = '<C-Tab>',
 			},
 		}
-
+		-- local function start_lsp_toolkit(opts)
+		-- 	MiniPick.start({
+		-- 		source = {
+		-- 			name = "LSP Toolkit",
+		-- 			items = { "Rename", "Go To Definition", "Find Document Symbols", "Hover Documentation", "Find Workspace Symbols", "Go To Implementation" },
+		-- 			choose = function(item)
+		-- 				vim.cmd("b#")
+		-- 				if item == "Rename" then
+		-- 					vim.lsp.buf.rename()
+		-- 				elseif item == "Go To Definition" then
+		-- 					MiniExtra.pickers.lsp({ scope = "definition" })
+		-- 				elseif item == "Hover Documentation" then
+		-- 					vim.lsp.buf.hover({ border = 'rounded' })
+		-- 				elseif item == "Find Document Symbols" then
+		-- 					MiniExtra.pickers.lsp({ scope = "document_symbol" })
+		-- 				elseif item == "Find Workspace Symbols" then
+		-- 					MiniExtra.pickers.lsp { scope = "workspace_symbol" }
+		-- 				elseif item == "Go To Implementation" then
+		-- 					MiniExtra.pickers.lsp { scope = "implementation" }
+		-- 				end
+		-- 			end
+		-- 		}
+		-- 	})
+		-- end
+		-- vim.api.nvim_create_user_command("LspToolkit", start_lsp_toolkit, { desc = "Start toolkit" })
+		--
 		local wipeout_cur = function()
 			vim.api.nvim_buf_delete(MiniPick.get_picker_matches().current.bufnr, {})
 		end
