@@ -25,8 +25,16 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.relativenumber = true
 vim.g.have_nerd_font = true
 vim.opt.shiftwidth = 4
-
-
+vim.filetype.add({
+	extension = {
+		png = "png",
+		jpg = "jpg",
+		jpeg = "jpeg",
+		gif = "gif",
+		webp = "webp",
+		avif = "avif",
+	}
+})
 vim.keymap.set('n', '<F13>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<F14>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<F15>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })

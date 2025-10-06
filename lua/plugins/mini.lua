@@ -49,7 +49,6 @@ return {
 		})
 		require('mini.icons').setup {}
 
-
 		require('mini.files').setup {
 			mappings = {
 				go_in_plus = '<CR>',
@@ -58,6 +57,17 @@ return {
 				trim_right = '.',
 			},
 		}
+		local files_set_cwd = function(path)
+			-- Works only if cursor is on the valid file system entry
+			local cur_entry_path = MiniFiles.get_fs_entry().path
+			local cur_directory = vim.fs.dirname(cur_entry_path)
+			vim.fn.chdir(cur_directory)
+			MiniFiles.trim_left()
+			local r = vim.fn.getcwd()
+			vim.notify('(mini.files) Set current working directory to ' .. r)
+		end
+		vim.api.nvim_create_user_command('Ff', 'lua MiniFiles.open()', {})
+		vim.api.nvim_create_user_command('FF', 'lua MiniPick.builtin.files()', {})
 
 		vim.api.nvim_create_user_command("Config", function(
 		)
@@ -70,15 +80,6 @@ return {
 		k = require 'mini.extra'
 		vim.api.nvim_create_user_command('M', k.pickers.marks, {})
 
-		local files_set_cwd = function(path)
-			-- Works only if cursor is on the valid file system entry
-			local cur_entry_path = MiniFiles.get_fs_entry().path
-			local cur_directory = vim.fs.dirname(cur_entry_path)
-			vim.fn.chdir(cur_directory)
-			MiniFiles.trim_left()
-			local r = vim.fn.getcwd()
-			vim.notify('(mini.files) Set current working directory to ' .. r)
-		end
 
 		vim.api.nvim_create_autocmd('User', {
 			pattern = 'MiniFilesBufferCreate',
@@ -91,8 +92,6 @@ return {
 			end,
 		})
 		vim.keymap.set('n', '<leader>ff', MiniFiles.open, { noremap = true })
-		vim.api.nvim_create_user_command('Ff', 'lua MiniFiles.open()', {})
-		vim.api.nvim_create_user_command('FF', 'lua MiniPick.builtin.files()', {})
 		-- require('mini.starter').setup { header = 'I use Neovim btw.', footer = 'With a tiling window manager.\nOn Arch Linux!' }
 		--
 		-- local mode_map = {
