@@ -1,0 +1,8 @@
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+vim.opt.clipboard = "unnamedplus"
+vim.opt.relativenumber = true
+vim.g.have_nerd_font = true
+vim.opt.shiftwidth = 4
+
+vim.opt.mouse = ""

@@ -1,0 +1,5 @@
+vim.keymap.set('n', '<F13>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<F14>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<F15>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+vim.keymap.set('n', '<F16>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<leader>n', '<Cmd>nohl<CR>', { desc = 'do not highlight!', silent = true })
