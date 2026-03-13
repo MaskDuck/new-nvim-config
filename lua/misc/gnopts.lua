@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+-- vim.opt.shortmess:append('c')
 vim.g.maplocalleader = "\\"
 vim.opt.clipboard = "unnamedplus"
 vim.opt.relativenumber = true

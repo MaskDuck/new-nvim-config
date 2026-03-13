@@ -1,0 +1,20 @@
+-- local function rename_current_file()
+-- 	local current_file = vim.api.nvim_buf_get_name(0)
+-- 	vim.ui.input({
+-- 		prompt = "New file name: ",
+-- 		completion = "file",
+-- 		default = current_file
+-- 	}, function(new_file_name)
+-- 		if new_file_name and new_file_name ~= '' and new_file_name ~= current_file then
+-- 			-- Use saveas to write to the new file name
+-- 			vim.cmd("saveas " .. new_file_name)
+-- 			-- Use an OS command to remove the old file
+-- 			vim.fn.system({ "mv", current_file, new_file_name })
+-- 			-- Optional: refresh the UI/statusline
+-- 			vim.cmd("redraw!")
+-- 		end
+-- 	end)
+-- end
+--
+-- -- Example mapping: map <leader>rn to this function in normal mode
+-- vim.api.nvim_create_user_command("Rnfile", rename_current_file, { desc = 'Rename current file' })

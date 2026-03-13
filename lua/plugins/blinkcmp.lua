@@ -46,7 +46,7 @@ return { {
 			},
 			list = { selection = { preselect = true, auto_insert = false } },
 			menu = { border = 'rounded' },
-			signature = { enabled = true }
+			-- signature = { enabled = true }
 		},
 
 		-- Default list of enabled providers defined so that you can extend it
